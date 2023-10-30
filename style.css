@@ -5,16 +5,17 @@
 }
 
 .navbar {
+  padding: 2em;
   height: 80px;
   width: 100%;
-  background-color: rgb(114, 114, 242);
+  background-color: #1c1c1c;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 46px;
+  width: 15em;
   height: 45px;
   display: flex;
   font-size: 30px;
@@ -23,6 +24,7 @@
   color: white;
   justify-content: center;
   align-items: center;
+  font-style: italic;
 }
 
 .nav {
@@ -35,17 +37,20 @@ ul li {
 }
 
 li a {
-  color: whitesmoke;
+  color: white;
   border-radius: 10px;
   text-decoration: none;
   font-size: 17px;
   padding: 7px 13px;
 }
 
-a.active,
-a:hover {
+.home_button {
   background-color: #1b9bff;
-  transition: 0.5s;
+  display: block;
+  font-family: arial;
+}
+.home_button:active {
+  transform: scale(0.9);
 }
 
 .content {
@@ -56,14 +61,13 @@ a:hover {
   border: none;
   outline: none;
 }
-
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100px;
-  background-color: #333;
+  background-color: #1c1c1c;
   width: 100%;
   color: #efefef;
   display: flex;
@@ -79,15 +83,19 @@ a:hover {
   margin-bottom: 10px;
   letter-spacing: 1;
 }
-
-.col-1 a {
-  display: block;
-  text-decoration: none;
-  color: #efefef;
-  margin-bottom: 5px;
+.footer .col-1-2 {
+  display: flex;
+  gap: 1em;
 }
-
-.col-1 a:hover {
-  border-bottom: 2px solid white;
-  background-color: transparent;
+.footer .col-1-2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7em;
+  transition: transform 0.5s;
+}
+.footer .col-1-2 a:hover {
+  transform: translateY(-5px);
+}
+.footer .col-1-2 a:active {
+  transform: translateY(-5px) scale(0.9);
 }
